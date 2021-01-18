@@ -15,9 +15,13 @@ class Router
     {
         try {
 
-            //chargement automatique des classes models
+            //chargement automatique des classes 
             spl_autoload_register(function ($class) {
-                require_once('models/' . $class . '.php');
+                $class = str_replace(__NAMESPACE__ . '\\', '', $class);
+                $class = str_replace('\\', '/', $class);
+                if (file_exists(__DIR__ . '/' . $class . '.php')) {
+                    require __DIR__ . '/' . $class . '.php';
+                }
             });
 
             //crée une variable
@@ -49,12 +53,12 @@ class Router
                 }
             } else {
                 require_once(dirname(__FILE__, 2) . '/controllers/ControllerHome.php');
-                $this->ctrl = new \ControllerHome($url);
+                $this->ctrl = new \Equus\P5\controllers\ControllerHome($url);
             }
         } catch (\Exception $e) {
             $errorMsg = $e->getMessage();
             //vue sécurisée
-            $this->_view = new \View('Error');
+            $this->_view = new \Equus\P5\views\View('Error');
             $this->_view->generate(array('errorMsg' => $errorMsg));
         }
     }
