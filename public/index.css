@@ -1,0 +1,17 @@
+.navbar-brand img{
+    width: 10%;
+}
+.navbar {
+    background-color: black;
+}
+nav {
+    position: fixed;
+    height: 15vh;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+}
+ul li {
+    list-style: none;
+}
