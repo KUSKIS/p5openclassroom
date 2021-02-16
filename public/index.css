@@ -2,7 +2,7 @@
     width: 10%;
 }
 .navbar {
-    background-color: black;
+    background-color:#333333;
 }
 nav {
     position: fixed;
@@ -14,4 +14,31 @@ ul {
 }
 ul li {
     list-style: none;
+}
+footer {
+    background-color:#333333;
+}
+
+body {
+    /*background-color: black;*/
+}
+
+.animation{
+    font-weight: 800;
+    font: 3.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+.animation .word {
+    display: inline-block;
+    line-height: 1em;
+}
+
+
+/*-----------les articles-----------*/
+
+.posts {
+    overflow: hidden;
+    padding-top: 15vh;
+    height: 100vh;
 }
