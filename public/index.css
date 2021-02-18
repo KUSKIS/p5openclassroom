@@ -20,7 +20,7 @@ footer {
 }
 
 body {
-    /*background-color: black;*/
+
 }
 
 .animation{
@@ -41,4 +41,16 @@ body {
     overflow: hidden;
     padding-top: 15vh;
     height: 100vh;
+}
+.article .container{
+    /*background-image: url(pictures/wallpaper.png);
+    opacity: 0.6;*/
+    background-color: rgb(247, 234, 218);
+}
+
+/*-----------------Template--------------*/
+
+.modal-content {
+    background-color: black!important;
+    opacity: 0.8;
 }

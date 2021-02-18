@@ -64,9 +64,8 @@
         }
     </style>
 
-    <!-- Main navigation -->
+
     <header>
-        <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <div class="container">
                 <a class="navbar-brand" href="#"><strong>EQUUS</strong></a>
@@ -82,7 +81,7 @@
                             <a class="nav-link" href="#">Link</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
+                            <a class="nav-link" data-toggle="modal" data-target="#modalLoginForm">Connexion/Inscription</a>
                         </li>
                     </ul>
                     <form class="form-inline">
@@ -93,16 +92,42 @@
                 </div>
             </div>
         </nav>
-        <!-- Navbar -->
-        <!-- Full Page Intro -->
+        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold white-text">Connexion</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="white-text">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <form action="" method="post">
+                            <div class="md-form mb-5">
+                                <i class="fas fa-horse-head prefix white-text"></i>
+                                <input type="text" name="pseudo" id="defaultForm-email" class="form-control validate" required>
+                                <label data-error="" data-success="" for="defaultForm-text">Pseudo</label>
+                            </div>
+                            <div class="md-form mb-4">
+                                <i class="fas fa-lock prefix white-text"></i>
+                                <input type="password" name="pass" id="defaultForm-pass" class="form-control validate" required>
+                                <label data-error="" data-success="" for="defaultForm-pass">Mot de Passe</label>
+                            </div><br>
+                            <div class="modal-footer d-flex justify-content-center"><br>
+                                <button type="submit" class="btn btn-outline-white wow fadeInDown">Se connecter</button>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center"><br>
+                                <button type="submit" class="btn btn-outline-white wow fadeInDown">S'inscrire</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('public/pictures/saddle.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-            <!-- Mask & flexbox options-->
             <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-                <!-- Content -->
                 <div class="container">
-                    <!--Grid row-->
                     <div class="row">
-                        <!--Grid column-->
                         <div class="col-md-12 pt-2 mb-4 white-text text-center">
                             <h1 class="animation" class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown" data-wow-delay="0.3s"><br><span class="word">PASSIONNEMENT CHEVAL</span><br><span class="word">PASSIONNEMENT E Q U U S</span></h1>
                             <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
@@ -110,51 +135,25 @@
                             <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Inscription</a>
                             <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About me</a>
                         </div>
-                        <!--Grid column-->
                     </div>
-                    <!--Grid row-->
                 </div>
-                <!-- Content -->
             </div>
-            <!-- Mask & flexbox options-->
         </div>
-        <!-- Full Page Intro -->
     </header>
-    <!-- Main navigation -->
-
 
     <?= $content ?>
 
-    <!-- Footer -->
     <footer class="page-footer font-small darken-3 pt-4">
-
-        <!-- Footer Elements -->
         <div class="container">
-
-            <!--Grid row-->
             <div class="row d-flex justify-content-center">
-
-                <!--Grid column-->
                 <div class="col-md-6">
-
-                    
                 </div>
-                <!--Grid column-->
-
             </div>
-            <!--Grid row-->
-
         </div>
-        <!-- Footer Elements -->
-
-        <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2018 Copyright:
             <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
         </div>
-        <!-- Copyright -->
-
     </footer>
-    <!-- Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -164,6 +163,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <script type="text/javascript" src="public/anime.js"></script>
+
+
 </body>
 
 </html>
