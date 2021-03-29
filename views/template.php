@@ -132,8 +132,8 @@
                             <h1 class="animation" class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown" data-wow-delay="0.3s"><br><span class="word">PASSIONNEMENT CHEVAL</span><br><span class="word">PASSIONNEMENT E Q U U S</span></h1>
                             <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
                             <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Partagez votre passion</strong></h5>
-                            <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Inscription</a>
-                            <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About me</a>
+                            <a class="btn btn-outline-white wow fadeInDown" data-toggle="modal" data-wow-delay="0.4s" data-target="#modalLoginForm">Inscription</a>
+                            <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">En savoir plus</a>
                         </div>
                     </div>
                 </div>

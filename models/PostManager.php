@@ -14,7 +14,7 @@ Class PostManager extends Model
     {
         $db = $this->dbConnect();
         $var = [];
-        $req = $db->query(' SELECT * FROM  chapters  ORDER BY id ASC ');
+        $req = $db->query(' SELECT * FROM  knowledge  ORDER BY id ASC ');
         $req->execute();
         //on crée la variable data qui contient les données
         while ($data = $req->fetch(\PDO::FETCH_ASSOC)) {
@@ -28,7 +28,7 @@ Class PostManager extends Model
 
     public function getListChapters()
     {
-        return $this->getAll('chapters', 'Post');
+        return $this->getAll('Post', 'knowledge');
     }
 
 

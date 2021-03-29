@@ -6,10 +6,10 @@ Class Post
 {
 
     protected $id,
-        $chap_title,
-        $chap_content,
-        $chap_date_info,
-        $chap_date_modif;
+        $know_title,
+        $know_content,
+        $know_date,
+        $know_img;
 
     public function __construct(array $data)
     {
@@ -21,8 +21,6 @@ Class Post
     public function hydrate(array $data)
     {
         foreach ($data as $key => $value) {
-            //on crée les setters du tableau recu: setId, setTitle
-            //pour définir les valeurs des attibuts
             $method = 'set' . ucfirst($key);
             if (method_exists($this, $method)) {
                 $this->$method($value);
@@ -40,28 +38,28 @@ Class Post
         }
     }
 
-    public function setChap_title($chap_title)
+    public function setKnow_title($know_title)
     {
-        if (is_string($chap_title)) {
-            $this->chap_title = $chap_title;
+        if (is_string($know_title)) {
+            $this->know_title = $know_title;
         }
     }
 
-    public function setChap_content($chap_content)
+    public function setKnow_content($know_content)
     {
-        if (is_string($chap_content)) {
-            $this->chap_content = $chap_content;
+        if (is_string($know_content)) {
+            $this->know_content = $know_content;
         }
     }
 
-    public function setChap_date_info($chap_date_info)
+    public function setKnow_date($know_date)
     {
-        $this->chap_date_info = $chap_date_info;
+        $this->know_date = $know_date;
     }
 
-    public function setChap_date_modif($chap_date_modif)
+    public function setKnow_img($know_img)
     {
-        $this->chap_date_modif = $chap_date_modif;
+        $this->know_img = $know_img;
     }
 
     //getters
@@ -71,24 +69,24 @@ Class Post
         return $this->id;
     }
 
-    public function chap_title()
+    public function know_title()
     {
-        return $this->chap_title;
+        return $this->know_title;
     }
 
-    public function chap_content()
+    public function know_content()
     {
-        return $this->chap_content;
+        return $this->know_content;
     }
 
-    public function chap_date_info()
+    public function know_date()
     {
-        return $this->chap_date_info;
+        return $this->know_date;
     }
 
-    public function chap_date_modif()
+    public function know_img()
     {
-        return $this->chap_date_modif;
+        return $this->know_img;
     }
 
 

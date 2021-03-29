@@ -24,9 +24,9 @@ Class ControllerHome
     public function listPosts()
     {
         $this->postManager = new \Equus\P5\models\PostManager();
-        $chapters = $this->postManager->getListChapters();
+        $knowledge = $this->postManager->getListChapters();
         $this->view = new \Equus\P5\views\View('Home');
-        $this->view->generate(array('chapters' => $chapters));
+        $this->view->generate(array('knowledge' => $knowledge));
     }
 
 

@@ -38,14 +38,15 @@ body {
 /*-----------les articles-----------*/
 
 .posts {
-    overflow: hidden;
+    /*overflow: hidden;*/
     padding-top: 15vh;
-    height: 100vh;
+    height: auto;
 }
 .article .container{
     /*background-image: url(pictures/wallpaper.png);
     opacity: 0.6;*/
     background-color: rgb(247, 234, 218);
+    overflow: hidden;
 }
 
 /*-----------------Template--------------*/
