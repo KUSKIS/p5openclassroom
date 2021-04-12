@@ -1,23 +1,23 @@
 <?php
 
-namespace Equus\P5\views;
+//namespace Equus\P5\views;
 
 class View
 {
 
-    private $_file;
-    private $_title;
+    private $file;
+    private $title;
 
     public function __construct($action)
     {
-        $this->_file = "views/View" . $action . ".php";
+        $this->file = "views/View" . $action . ".php";
     }
 
     public function generate($data)
     {
-        $content = $this->generateFile($this->_file, $data);
+        $content = $this->generateFile($this->file, $data);
         $view = $this->generateFile('views/template.php', array(
-            'title' => $this->_title,
+            'title' => $this->title,
             'content' => $content
         ));
 

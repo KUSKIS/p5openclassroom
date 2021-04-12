@@ -117,7 +117,7 @@
                                 <button type="submit" class="btn btn-outline-white wow fadeInDown">Se connecter</button>
                             </div>
                             <div class="modal-footer d-flex justify-content-center"><br>
-                                <button type="submit" class="btn btn-outline-white wow fadeInDown">S'inscrire</button>
+                                <a href="post&writePostOne" class="btn btn-outline-white wow fadeInDown">S'inscrire</a>
                             </div>
                         </form>
                     </div>

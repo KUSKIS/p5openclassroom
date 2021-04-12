@@ -1,12 +1,13 @@
 <?php
 
 namespace Equus\P5\controllers;
+
 require_once('views/View.php');
-require_once('models/PostManager.php');
+require_once('models/PostOneManager.php');
 
 Class ControllerHome
 {
-    private $postManager;
+    private $postOneManager;
     private $view;
 
     public function __construct()
@@ -17,15 +18,15 @@ Class ControllerHome
             $this->listPosts();
         }
 
-        $this->postManager = new \Equus\P5\models\PostManager();
+        $this->postOneManager = new \Equus\P5\models\PostOneManager();
 
     }
 
     public function listPosts()
     {
-        $this->postManager = new \Equus\P5\models\PostManager();
-        $knowledge = $this->postManager->getListChapters();
-        $this->view = new \Equus\P5\views\View('Home');
+        $this->postOneManager = new \Equus\P5\models\PostOneManager();
+        $knowledge = $this->postOneManager->getListPostOne();
+        $this->view = new \View('Home');
         $this->view->generate(array('knowledge' => $knowledge));
     }
 

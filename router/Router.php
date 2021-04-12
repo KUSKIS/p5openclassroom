@@ -4,6 +4,7 @@ namespace Equus\P5\router;
 
 require_once('views/View.php');
 require_once('controllers/ControllerHome.php');
+require_once('controllers/ControllerPostOne.php');
 
 class Router
 {
@@ -15,7 +16,7 @@ class Router
     {
         try {
 
-            //chargement automatique des classes 
+            //chargement automatique des classes
             spl_autoload_register(function ($class) {
                 $class = str_replace(__NAMESPACE__ . '\\', '', $class);
                 $class = str_replace('\\', '/', $class);
@@ -49,7 +50,9 @@ class Router
                     require_once($controllerFile);
                     $this->ctrl = new $controllerClass($url);
                 } else {
-                    throw new \Exception("Page introuvable", 1);
+                    require_once(dirname(__FILE__, 2) . '/controllers/ControllerPostOne.php');
+                    $this->ctrl = new \Equus\P5\controllers\ControllerPostOne($url);
+                    /*throw new \Exception("Page introuvable", 1);*/
                 }
             } else {
                 require_once(dirname(__FILE__, 2) . '/controllers/ControllerHome.php');
@@ -58,8 +61,8 @@ class Router
         } catch (\Exception $e) {
             $errorMsg = $e->getMessage();
             //vue sécurisée
-            $this->_view = new \Equus\P5\views\View('Error');
-            $this->_view->generate(array('errorMsg' => $errorMsg));
+            $this->view = new \View('Error');
+            $this->view->generate(array('errorMsg' => $errorMsg));
         }
     }
 }

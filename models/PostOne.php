@@ -2,7 +2,7 @@
 
 namespace Equus\P5\models;
 
-Class Post
+Class PostOne
 {
 
     protected $id,

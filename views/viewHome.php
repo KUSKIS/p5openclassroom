@@ -14,6 +14,7 @@
                                     <div class="card-body">
                                         <p class="card-title text-muted text-uppercase font-small mt-1 mb-3"><?= $knowledge->know_title() ?></p>
                                         <p class="mb-2"><?= $knowledge->know_content() ?></p>
+                                        <a class="btn btn-info btn-rounded btn-md" href="post&id=<?= $knowledge->id() ?>"><i class="fas fa-clone left"></i> Lire</a>
                                     </div>
                                 </div>
                             </div>
